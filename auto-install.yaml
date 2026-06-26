@@ -7,7 +7,7 @@ autoinstall:
     hostname: ubuntu-client
     username: localadmin
     # Generate this hash on a Linux machine using: openssl passwd -6
-    password: "$6$YOUR_HASHED_PASSWORD_HERE"
+    password: "$6$cNnawFXOpTM748U3$l.04fA7Hn93JjyvBVPYjUy/s/y6dyveC/wAV3QH5uwK9D88442fBnS9jHXFHo5sxml3zL7qCjV7L556Nbjxlo1"
 
   # 2. Enables unattended-upgrades for all packages
   updates: all
@@ -23,7 +23,7 @@ autoinstall:
 
     # Execute the UCS Domain Join
     # NOTE: See the security warning below regarding passwords in this command
-    - curtin in-target -- univention-domain-join-cli --master-ip=192.168.1.10 --domain=yourdomain.int --admin-user=JoinAccount --admin-password=YourJoinPassword
+    - curtin in-target -- univention-domain-join-cli --master-ip=192.168.100.147 --domain=yourdomain.int --admin-user=Administrator --admin-password=Treadmill8-Undecided3
 
     # Optional: Configure PAM to automatically create local home directory structures if needed
     - curtin in-target -- bash -c "echo 'session optional pam_mkhomedir.so skel=/etc/skel umask=077' >> /etc/pam.d/common-session"
